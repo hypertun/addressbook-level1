@@ -14,16 +14,9 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
-/*
+        /*
  * NOTE : =============================================================
  * This class header comment below is brief because details of how to
  * use this class are documented elsewhere.
@@ -490,9 +483,17 @@ public class AddressBook {
      */
     private static ArrayList<String[]> getPersonsWithNameContainingAnyKeyword(Collection<String> keywords) {
         final ArrayList<String[]> matchedPersons = new ArrayList<>();
+        HashSet<String> keywordsconverted = new HashSet<>();
+        for(String lowercasekeywords : keywords){
+            keywordsconverted.add((lowercasekeywords).toLowerCase());
+        }
         for (String[] person : getAllPersonsInAddressBook()) {
             final Set<String> wordsInName = new HashSet<>(splitByWhitespace(getNameFromPerson(person)));
-            if (!Collections.disjoint(wordsInName, keywords)) {
+            final HashSet<String> wordsInNameconverted =  new HashSet<>();
+            for(String lowercasewordsInName: wordsInName){
+                wordsInNameconverted.add((lowercasewordsInName).toLowerCase());
+            }
+            if (!Collections.disjoint(wordsInNameconverted, keywordsconverted)) {
                 matchedPersons.add(person);
             }
         }
