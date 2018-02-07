@@ -62,6 +62,9 @@
 || list: Displays all persons as a list with index numbers.
 || 	Example: list
 || 
+|| sort: Sorts all persons as a list alphabetically.
+|| 	Example: sort
+|| 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
@@ -184,8 +187,9 @@
 || 0 persons found!
 || ===================================================
 || Enter command: || [Command entered:  find betsy]
+|| 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 
-|| 0 persons found!
+|| 1 persons found!
 || ===================================================
 || Enter command: || [Command entered:  find Betsy]
 || 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
@@ -274,6 +278,43 @@
 || Enter command: || [Command entered:  list]
 || 
 || 0 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  add Zdam Brown p/111111 e/adam@gmail.com]
+|| New person added: Zdam Brown, Phone: 111111, Email: adam@gmail.com
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Zdam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 
+|| 1 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  add Detsy Choo p/222222 e/benchoo@nus.edu.sg]
+|| New person added: Detsy Choo, Phone: 222222, Email: benchoo@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Zdam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Detsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 
+|| 2 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  add Charlie Dickson e/charlie.d@nus.edu.sg p/333333]
+|| New person added: Charlie Dickson, Phone: 333333, Email: charlie.d@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Zdam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Detsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg
+|| 
+|| 3 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg
+|| 	2. Detsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Zdam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 
+|| 3 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  clear]
+|| Address book has been cleared!
 || ===================================================
 || Enter command: || [Command entered:  exit]
 || Exiting Address Book... Good bye!
